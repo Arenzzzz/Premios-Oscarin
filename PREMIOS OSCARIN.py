@@ -67,4 +67,35 @@ def mostrar_ganadores():
             ganadora = max(pelis, key=pelis.get)  # Película con más votos
             print(f" - {cat}: '{ganadora}'")
 
+# Función para mostrar el menú principal
+def mostrar_menu():
+    print("\n=== Sistema de Premios Oscarin ===")
+    print("1. Registrar película")
+    print("2. Registrar voto")
+    print("3. Mostrar resultados")
+    print("4. Mostrar ganadores por categoría")
+    print("5. Salir")
+
+# Bucle principal del programa
+while True:
+    try:
+        mostrar_menu()
+        opcion = int(input("Seleccione una opción: "))
+        
+        if opcion == 1:
+            registrar_pelicula()
+        elif opcion == 2:
+            registrar_voto()
+        elif opcion == 3:
+            mostrar_resultados()
+        elif opcion == 4:
+            mostrar_ganadores()
+        elif opcion == 5:
+            print("GRACIAS POR USAR EL PROGRAMA")
+            break
+        else:
+            print("Opción inválida. Intente de nuevo.")
+    except ValueError:
+        print("❌ ERROR DETECTADO: Entrada inválida.")
+
 
