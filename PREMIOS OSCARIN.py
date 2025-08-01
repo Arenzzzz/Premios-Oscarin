@@ -58,3 +58,13 @@ def mostrar_resultados():
         print(f"\nCategoría: {cat}")
         for titulo, votos in pelis.items():
             print(f" - {titulo}: {votos} voto(s)")
+
+# Función para mostrar los ganadores de cada categoría
+def mostrar_ganadores():
+    print("\n🏆 Ganadores por categoría:")
+    for cat, pelis in categorias.items():
+        if pelis:
+            ganadora = max(pelis, key=pelis.get)  # Película con más votos
+            print(f" - {cat}: '{ganadora}'")
+
+
