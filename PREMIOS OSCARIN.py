@@ -51,3 +51,10 @@ def registrar_voto():
         except ValueError:
             print("❌ Entrada inválida. Por favor ingrese un número.")
 
+# Función para mostrar los resultados actuales (películas y sus votos)
+def mostrar_resultados():
+    print("\nRESULTADOS ACTUALES:")
+    for cat, pelis in categorias.items():
+        print(f"\nCategoría: {cat}")
+        for titulo, votos in pelis.items():
+            print(f" - {titulo}: {votos} voto(s)")
